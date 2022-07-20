@@ -1,5 +1,7 @@
-import AccountCircleOutlined from '@mui/icons-material/AccountCircleOutlined';
 import React from 'react'
+
+import {Link} from 'react-router-dom';
+import AccountCircleOutlined from '@mui/icons-material/AccountCircleOutlined';
 import styled from 'styled-components';
 import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
 
@@ -58,10 +60,12 @@ export const Navbar = () => {
           <Input placeholder='search...'/>
            <SearchOutlinedIcon/>
         </Search>
-        <Button>
-          <AccountCircleOutlined/>
-          SIGN IN
-        </Button>
+        <Link to="signin" style={{textDecoration:"none"}}>
+            <Button>
+              <AccountCircleOutlined />
+              SIGN IN
+            </Button>
+          </Link>
       </Wrapper>
     </Container>
   )
